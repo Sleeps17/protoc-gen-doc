@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package com.example;
+
+import "google/api/field_behavior.proto";
+
+/**
+ * User message with field behavior annotations.
+ * 
+ * This demonstrates how to use google.api.field_behavior options
+ * to specify field behavior in API documentation.
+ */
+message User {
+  string id = 1 [(google.api.field_behavior) = REQUIRED]; /// Unique user identifier
+  string name = 2 [(google.api.field_behavior) = REQUIRED]; /// User's full name
+  string email = 3 [(google.api.field_behavior) = REQUIRED]; /// User's email address
+  string password = 4 [(google.api.field_behavior) = INPUT_ONLY]; /// User's password (only for input)
+  string created_at = 5 [(google.api.field_behavior) = OUTPUT_ONLY]; /// When the user was created
+  string updated_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY]; /// When the user was last updated
+  string status = 7 [(google.api.field_behavior) = IMMUTABLE]; /// User status (cannot be changed)
+  string avatar_url = 8 [(google.api.field_behavior) = OPTIONAL]; /// Optional avatar URL
+  repeated string tags = 9 [(google.api.field_behavior) = OPTIONAL]; /// Optional user tags
+}
+
+/**
+ * Create user request with required fields only.
+ */
+message CreateUserRequest {
+  string name = 1 [(google.api.field_behavior) = REQUIRED]; /// User's full name
+  string email = 2 [(google.api.field_behavior) = REQUIRED]; /// User's email address
+  string password = 3 [(google.api.field_behavior) = REQUIRED]; /// User's password
+  string avatar_url = 4 [(google.api.field_behavior) = OPTIONAL]; /// Optional avatar URL
+  repeated string tags = 5 [(google.api.field_behavior) = OPTIONAL]; /// Optional user tags
+}
+
+/**
+ * Update user request with optional fields.
+ */
+message UpdateUserRequest {
+  string id = 1 [(google.api.field_behavior) = REQUIRED]; /// User ID to update
+  string name = 2 [(google.api.field_behavior) = OPTIONAL]; /// New name (optional)
+  string email = 3 [(google.api.field_behavior) = OPTIONAL]; /// New email (optional)
+  string avatar_url = 4 [(google.api.field_behavior) = OPTIONAL]; /// New avatar URL (optional)
+  repeated string tags = 5 [(google.api.field_behavior) = OPTIONAL]; /// New tags (optional)
+} 
