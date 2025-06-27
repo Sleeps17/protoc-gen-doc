@@ -1,7 +1,7 @@
 package extensions
 
 import (
-	"github.com/pseudomuto/protoc-gen-doc/extensions"
+	"github.com/Sleeps17/protoc-gen-doc/extensions"
 	"google.golang.org/genproto/googleapis/api/annotations"
 )
 

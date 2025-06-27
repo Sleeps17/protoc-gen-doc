@@ -3,8 +3,8 @@ package extensions_test
 import (
 	"testing"
 
-	"github.com/pseudomuto/protoc-gen-doc/extensions"
-	. "github.com/pseudomuto/protoc-gen-doc/extensions/google_api_field_behavior"
+	"github.com/Sleeps17/protoc-gen-doc/extensions"
+	. "github.com/Sleeps17/protoc-gen-doc/extensions/google_api_field_behavior"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/genproto/googleapis/api/annotations"

@@ -10,7 +10,7 @@
 //
 //	protoc --doc_out=. --doc_opt=custom.tmpl,docs.txt protos/*.proto
 //
-// For more details, check out the README at https://github.com/pseudomuto/protoc-gen-doc
+// For more details, check out the README at https://github.com/Sleeps17/protoc-gen-doc
 package main
 
 import (
@@ -19,11 +19,11 @@ import (
 	"log"
 	"os"
 
-	gendoc "github.com/pseudomuto/protoc-gen-doc"
-	_ "github.com/pseudomuto/protoc-gen-doc/extensions/google_api_field_behavior" // imported for side effects
-	_ "github.com/pseudomuto/protoc-gen-doc/extensions/google_api_http"           // imported for side effects
-	_ "github.com/pseudomuto/protoc-gen-doc/extensions/lyft_validate"             // imported for side effects
-	_ "github.com/pseudomuto/protoc-gen-doc/extensions/validator_field"           // imported for side effects
+	gendoc "github.com/Sleeps17/protoc-gen-doc"
+	_ "github.com/Sleeps17/protoc-gen-doc/extensions/google_api_field_behavior" // imported for side effects
+	_ "github.com/Sleeps17/protoc-gen-doc/extensions/google_api_http"           // imported for side effects
+	_ "github.com/Sleeps17/protoc-gen-doc/extensions/lyft_validate"             // imported for side effects
+	_ "github.com/Sleeps17/protoc-gen-doc/extensions/validator_field"           // imported for side effects
 )
 
 func main() {
